@@ -1,14 +1,18 @@
 import React from 'react';
 
 // PUBLIC_INTERFACE
-function ProductCard({ title, subtitle, tag, image, description, alt }) {
+function ProductCard({ title, tag, image, alt }) {
   return (
     <div className="product-card" tabIndex={0}>
-      <img className="product-image" src={image} alt={alt} />
-      <div className="product-overlay">
-        <div className="product-tag">{tag}</div>
-        <div className="product-title">{title}</div>
-        <div className="product-description">{description}</div>
+      {/* Image */}
+      <img className="product-image" src={image} alt={alt || title} />
+      {/* Category overlay, per reference: upper left */}
+      <div className="product-category">
+        {tag}
+      </div>
+      {/* Title overlay: bottom left */}
+      <div className="product-title">
+        {title}
       </div>
     </div>
   );

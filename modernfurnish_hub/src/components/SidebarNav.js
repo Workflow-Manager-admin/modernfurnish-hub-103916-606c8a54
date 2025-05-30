@@ -3,13 +3,16 @@ import LogoHeader from './LogoHeader';
 import NavButton from './NavButton';
 import SocialIcons from './SocialIcons';
 
-const navItems = ["Shop", "About", "Pages", "Blog", "Contact"];
+// The order and use matches the design reference notes.
+const navItems = ["Shop", "About", "Product", "Cart"];
 
 // PUBLIC_INTERFACE
 function SidebarNav() {
   return (
     <aside className="sidebar-nav">
+      {/* Branding */}
       <LogoHeader />
+      {/* Navigation links and CTA */}
       <nav>
         <ul className="sidebar-nav-list">
           {navItems.map((item, idx) => (
@@ -20,8 +23,10 @@ function SidebarNav() {
         </ul>
         <NavButton text="New this week" />
       </nav>
+      {/* Social icons and/or secondary links */}
       <div className="sidebar-bottom">
         <SocialIcons />
+        {/* Add secondary muted text or links here if needed */}
       </div>
     </aside>
   );
