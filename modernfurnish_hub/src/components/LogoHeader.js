@@ -4,25 +4,17 @@ import React from 'react';
 function LogoHeader() {
   return (
     <div style={{
-      fontFamily: "'Helvetica Neue', 'Arial', sans-serif",
-      padding: '2rem 1rem 0.5rem 1rem',
-      textAlign: 'left'
+      fontFamily: "'Helvetica Neue', Arial, sans-serif",
+      textAlign: 'left',
+      marginBottom: '24px',
+      userSelect: 'none'
     }}>
-      <div style={{
-        fontSize: '2.2rem',
-        fontWeight: 800,
-        color: 'var(--accent)',
-        letterSpacing: '0.5px',
-        lineHeight: '1'
-      }}>Amado</div>
-      <div style={{
-        fontSize: '0.8rem',
-        color: '#bbb',
-        letterSpacing: '0.38em',
-        fontWeight: 500,
-        textTransform: 'uppercase',
-        marginTop: '0.2em'
-      }}>FURNITURE</div>
+      <div className="brand-header">
+        Amado
+      </div>
+      <div className="brand-sub">
+        FURNITURE
+      </div>
     </div>
   );
 }
